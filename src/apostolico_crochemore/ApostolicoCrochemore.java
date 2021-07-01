@@ -17,7 +17,11 @@ public class ApostolicoCrochemore {
 
         /* Preprocessing */
         computeLPSArray(pat, m, kmpNext);
-        for (ell = 1; pat.charAt(ell - 1) == pat.charAt(ell); ell++);
+        
+        ell = 1;
+        while (pat.charAt(ell - 1) == pat.charAt(ell)) {
+            ell += 1;
+        }
         if (ell == m) {
             ell = 0;
         }
